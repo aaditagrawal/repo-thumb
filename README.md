@@ -67,12 +67,13 @@ src/
   model.ts          Design schema, validation, palettes, title layout
   github.ts         Public repository lookup
   renderer.ts       Shared canvas preview and PNG export
+  assets/           SVG sources imported by the renderer
   render/           Cached gradient rendering
   lib/              Saved designs and portable recipes
   ui/               DOM controls, library rows, scroll cue
 scripts/            Source packaging, benchmarks, deployment checks
 tests/e2e/          Desktop and mobile browser tests
-public/             Local fonts, logos, licenses, security headers
+public/             Local fonts, licenses, site assets, security headers
 ```
 
 Spatial weights and rendered backgrounds are cached independently, so changing text reuses the gradient. Input events share an animation-frame render, saved rows use small CSS swatches, and optional fonts load when selected. See the [architecture](docs/architecture.md) and [measured performance notes](docs/performance.md).

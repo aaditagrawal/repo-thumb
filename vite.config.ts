@@ -14,6 +14,17 @@ export default defineConfig(async () => {
       : [],
     server: {
       host: "0.0.0.0",
+      watch: {
+        ignored: [
+          "**/.cloudflare/**",
+          "**/.wrangler/**",
+          "**/dist-cloudflare/**",
+          "**/artifacts/**",
+          "**/test-results/**",
+          "**/playwright-report/**",
+          "**/public/repo-thumb-source.zip",
+        ],
+      },
       fs: {
         strict: true,
         allow: [fileURLToPath(new URL(".", import.meta.url))],

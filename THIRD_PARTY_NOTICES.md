@@ -11,7 +11,7 @@ The application code is MIT licensed. Bundled third-party assets retain these li
 | Most logo paths             | https://github.com/simple-icons/simple-icons            | CC0 1.0     |
 | Java, C#, MATLAB logo paths | https://github.com/devicons/devicon                     | MIT         |
 
-Font licenses are distributed in `public/fonts/`. Logo licenses are distributed in `public/logos/`. Trademarks belong to their respective owners; their presence does not imply endorsement.
+Font licenses are distributed in `public/fonts/`. Logo licenses are distributed in `public/logos/`; the imported SVG sources live in `src/assets/logos/`. Trademarks belong to their respective owners; their presence does not imply endorsement.
 
 The static DM Sans and Geist Mono instances are renamed internally to Repo Thumb Display and Repo Thumb Mono. The UI uses a subset of Inter, renamed Repo Thumb UI Sans. The original full Inter font remains available for artwork that selects Inter. Font subsets and static instances retain their original copyright notices and OFL licenses.
 

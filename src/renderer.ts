@@ -3,7 +3,7 @@ import { iconMesh } from "./icon-mesh";
 import { defaultDesign, languageLogos, titleLines } from "./model";
 import type { Design } from "./model";
 
-const logoFiles = import.meta.glob<string>("/public/logos/*.svg", {
+const logoFiles = import.meta.glob<string>("./assets/logos/*.svg", {
   query: "?raw",
   import: "default",
   eager: true,
