@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "repository": "aaditagrawal/repo-thumb",
+  "owner": "aaditagrawal",
+  "title": "repo-thumb",
+  "language": "TypeScript",
+  "color": "#ffad66",
+  "highlight": "#ffe5c7",
+  "background": "#0f0f0f",
+  "text": "#f0eee6",
+  "positionX": 78.125,
+  "positionY": 42.1875,
+  "spread": 100,
+  "strength": 100,
+  "fontSize": 128,
+  "tracking": -4,
+  "titleFont": "Display",
+  "showLanguage": true,
+  "showOwner": true
+}

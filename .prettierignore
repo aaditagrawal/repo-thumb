@@ -1,0 +1,10 @@
+node_modules
+dist
+dist-cloudflare
+.cloudflare
+.wrangler
+artifacts
+test-results
+playwright-report
+public/repo-thumb-source.zip
+bun.lock

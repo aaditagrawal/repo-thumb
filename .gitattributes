@@ -1,0 +1,6 @@
+.openai export-ignore
+.cloudflare export-ignore
+.wrangler export-ignore
+artifacts export-ignore
+test-results export-ignore
+playwright-report export-ignore
