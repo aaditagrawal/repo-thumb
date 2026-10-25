@@ -30,6 +30,8 @@ If your login can access multiple accounts, set `CLOUDFLARE_ACCOUNT_ID` for the 
 
 The CLI and adapter are pinned beta releases. See Cloudflare's [project workflow](https://developers.cloudflare.com/cf/projects/) and [configuration reference](https://developers.cloudflare.com/cf/projects/cloudflare-config/) when upgrading them.
 
+HTML uses `Cache-Control: no-transform` to prevent edge-injected scripts, including an account's automatic analytics beacon. This keeps the self-only script policy intact without changing settings for other sites in the zone. See Cloudflare's [Web Analytics FAQ](https://developers.cloudflare.com/web-analytics/faq/#my-website-is-proxied-through-cloudflare-but-web-analytics-automatic-setup-is-not-working).
+
 ### Other static hosts
 
 On Cloudflare Pages, use `bun run build` as the build command and `dist` as the output directory. On Netlify, the included `netlify.toml` provides the same settings. Use Bun 1.4.4.
