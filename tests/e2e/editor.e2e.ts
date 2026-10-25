@@ -220,3 +220,37 @@ test("the frame stays visible while the scroll cue follows available content", a
   await page.setViewportSize(viewport);
   await expect(cue).toBeVisible();
 });
+
+test("the paper surface fills wide and tall viewports inside a thin frame", async ({
+  page,
+}) => {
+  for (const viewport of [
+    { width: 2560, height: 1440 },
+    { width: 3200, height: 1800 },
+    { width: 1440, height: 2200 },
+  ]) {
+    await page.setViewportSize(viewport);
+    const bounds = await page.locator(".app-shell").boundingBox();
+    if (!bounds) throw new Error("Missing app surface");
+    const frame = await page.evaluate(() =>
+      parseFloat(
+        getComputedStyle(document.documentElement).getPropertyValue(
+          "--frame-size",
+        ),
+      ),
+    );
+    expect(bounds.x).toBeCloseTo(frame, 0);
+    expect(bounds.width).toBeCloseTo(viewport.width - frame * 2, 0);
+    expect(bounds.y + bounds.height).toBeGreaterThanOrEqual(
+      viewport.height - frame - 1,
+    );
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+  }
+  await expect(
+    page.getByRole("button", { name: "Scroll down", exact: true }),
+  ).toBeHidden();
+});

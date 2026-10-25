@@ -186,14 +186,16 @@ svg {
   top: 16px;
 }
 .app-shell {
-  max-width: 1600px;
-  margin: auto;
+  min-height: calc(100dvh - 2 * var(--frame-size));
+  display: flex;
+  flex-direction: column;
   background: var(--paper);
   border-radius: 4px;
   overflow: clip;
 }
 .app-header {
   height: 78px;
+  flex-shrink: 0;
   padding: 0 28px;
   display: flex;
   align-items: center;
@@ -266,6 +268,8 @@ svg {
 }
 .workspace {
   display: grid;
+  flex: 1;
+  align-content: start;
   grid-template-columns: 320px minmax(0, 1fr);
   gap: 34px;
   padding: 0 28px 32px;
@@ -860,6 +864,7 @@ input[type="range"]::-moz-range-thumb {
 }
 .app-footer {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 24px;
   min-height: 95px;
